@@ -33,10 +33,6 @@ int main() {
     S.pop(); S.pop();
     expect( S.toString() == "70 60 50 40 30 20 10 0 ");
 
-    while(!S.isEmpty()) {
-        S.pop();
-        ctr++;
-    }
-    expect(ctr == 8);
+
     assertionReport();
 }

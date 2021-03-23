@@ -31,6 +31,7 @@ class Node {         // Singly linked list node class
     // with the other implementations
     LStack(int size = 0) { top = NULL; size = 0; }
 
+    ~LStack() { clear(); }
 
     // Reinitialize stack
     void clear() { while (top != NULL) pop(); }
