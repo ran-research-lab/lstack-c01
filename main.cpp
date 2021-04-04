@@ -28,11 +28,18 @@ int main() {
 	LStack S(20);
 	for(int i = 0; i < 10; i++) S.push(i*10);
     expect( S.toString() == "90 80 70 60 50 40 30 20 10 0 ");
-    int ctr = 0;
+  int ctr = 0;
 
-    S.pop(); S.pop();
-    expect( S.toString() == "70 60 50 40 30 20 10 0 ");
+  S.pop(); S.pop();
+  expect( S.toString() == "70 60 50 40 30 20 10 0 ");
+
+  expect(S.topValue() == 70);
+  expect(S.pop() == 70);
+  expect(S.topValue() == 60);
+
+  S.push(42);
+  expect( S.toString() == "42 60 50 40 30 20 10 0 ");
 
 
-    assertionReport();
+  assertionReport();
 }
